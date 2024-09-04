@@ -74,7 +74,7 @@ export default class MaskedInput extends React.PureComponent {
     return render(this.setRef, {
       onBlur: this.onBlur,
       onChange: this.onChange,
-      defaultValue: this.props.value,
+      // defaultValue: this.props.value, <-- this causes not calling onUpdate on first "full-delete" of content
       ...props,
     })
   }
